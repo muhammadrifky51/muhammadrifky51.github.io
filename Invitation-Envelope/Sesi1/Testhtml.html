@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Ucapan</title>
+  </head>
+  <body>
+    <h1>Form Ucapan</h1>
+    <form>
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required><br><br>
+      
+      <label for="ucapan">Ucapan:</label>
+      <textarea id="ucapan" name="ucapan" rows="5" cols="50" required></textarea><br><br>
+
+      <input type="submit" value="Kirim">
+    </form>
+
+    <h2>Daftar Ucapan:</h2>
+    <ul id="daftarUcapan"></ul>
+
+    <script>
+      // Array untuk menyimpan semua ucapan
+      const daftarUcapan = [];
+
+      // Menangkap submit form
+      document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Mencegah halaman web untuk direfresh saat tombol submit diklik
+        
+        // Mendapatkan nilai dari input nama dan textarea ucapan
+        const nama = document.getElementById('nama').value;
+        const ucapan = document.getElementById('ucapan').value;
+
+        // Menambahkan ucapan ke dalam daftar ucapan dan menampilkan pada halaman web
+        daftarUcapan.push({ nama, ucapan });
+        tampilkanDaftarUcapan();
+
+        // Membersihkan form setelah ucapan dikirimkan
+        document.getElementById('nama').value = '';
+        document.getElementById('ucapan').value = '';
+      });
+
+      // Fungsi untuk menampilkan daftar ucapan pada halaman web
+      function tampilkanDaftarUcapan() {
+        const daftarUcapanElem = document.getElementById('daftarUcapan');
+
+        // Menghapus semua elemen pada daftar ucapan
+        daftarUcapanElem.innerHTML = '';
+
+        // Menambahkan setiap ucapan ke dalam daftar ucapan
+        for (const ucapan of daftarUcapan) {
+          const li = document.createElement('li');
+          li.innerText = `${ucapan.nama}: ${ucapan.ucapan}`;
+          daftarUcapanElem.appendChild(li);
+        }
+      }
+    </script>
+  </body>
+</html>
