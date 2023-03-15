@@ -27,11 +27,16 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-style: normal;
-  color: #222222; }
+  color: #222222; 
+  background-color: white;
+  color: black;}
 
-:root {
-  color-scheme: only light;
-}
+  @media (prefers-color-scheme: light) {
+    body {
+      background-color: white;
+      color: black;
+    }
+  }
 
 * {
   margin: 0;
