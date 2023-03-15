@@ -29,6 +29,10 @@ body {
   font-style: normal;
   color: #222222; }
 
+:root {
+  color-scheme: only light;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -2069,3 +2073,8 @@ box-sizing: border-box;
 .gallery_content a {
   z-index: 1;
 }
+
+
+/*===========================
+     16.Ucapan & Doa css 
+===========================*/
