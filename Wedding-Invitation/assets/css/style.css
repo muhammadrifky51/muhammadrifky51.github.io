@@ -937,9 +937,20 @@ p {
 /*===========================
      03.COUPLE css 
 ===========================*/
+.couple_transition {
+  background-color: #B5F2F7;
+  position: relative;
+  z-index: 9;
+  overflow: hidden; }
+
 .couple_area {
   background-color: #1AD9E9;
 }
+
+.couple_area .section_title img {
+  width: 500px; 
+  height: auto;}
+
 .single_couple .couple_image {
   overflow: hidden;
   border-radius: 10%; 
