@@ -2062,7 +2062,7 @@ textarea[type="text"] {
 .ucapan_area li{
   float: left;
   margin: 0 5px 0 0;
-  width: 130px;
+  width: 120px;
   height: 40px;
   position: relative;
 }
@@ -2085,6 +2085,10 @@ textarea[type="text"] {
   bottom: 0;
 }
 
+.ucapan_kehadiran input[type="text"]{
+  width: 75%;
+}
+
 .ucapan_kehadiran input[type="radio"]{
   opacity: 0.01;
   z-index: 100;
@@ -2092,7 +2096,7 @@ textarea[type="text"] {
 
 .ucapan_kehadiran input[type="radio"]:hover+label{
   padding-top: 8px;
-  font-size: medium;
+  font-size: 1.1rem;
   transition: 0.2s;
   width: 100.1%;
   height: 100.1%;
