@@ -2114,11 +2114,12 @@ textarea[type="text"] {
 
 .ucapan_kehadiran input,
 .ucapan_kehadiran label {
-  padding: 5px;
+  padding: 3px;
   border: 1px solid #000000;
   cursor: pointer;
   z-index: 90;
   border-radius: 25px;
+  width: auto;
   font-size: small;
 }
 
