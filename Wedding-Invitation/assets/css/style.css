@@ -2169,7 +2169,8 @@ textarea[type="text"] {
 }
 
 .ucapan_area .list_ucapan{
-  background-color: #17aab4;
+  background-color: #ffffff9d;
+  z-index: 3;
   display: inline-block;
   width: 75%;
   max-height: 500px;
@@ -2181,23 +2182,89 @@ textarea[type="text"] {
 
 .list_ucapan .bubble{
   clear: left;
-  background-color: #dbe8e9;
+  z-index: 2;
+  background-color: #5dd1da;
   width: fit-content;
   position: relative;
   padding: 4px;
   border-radius: 25px;
-  border-color: #000000;
+  /*border-color: #000000;
   border-style: solid;
-  border-width: 0.1px;
+  border-width: 0.1px;*/
   margin-left: 10px;
   margin-bottom: 15px;
   height: fit-content;
 }
 
+.list_ucapan .bubble:before {
+/*
+  content: "";
+  position: absolute;
+  z-index:-1;
+  left: -22px;
+  top: 0;
+  width: 40px;
+  border-bottom: 20px solid #5dd1da;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px ;
+*/
+  content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 95%;
+	left: 0.7em;
+	border: .5rem solid transparent;
+	border-top: none;
+  border-bottom-color: #5dd1da;
+}
+/*
+.list_ucapan .bubble:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -28px;
+  top: -3px;
+  height: 38px;
+  width: 28px;
+  background: #afbabb;
+  border-top-right-radius: 20px;
+}
+*/
 .list_ucapan .nama_dan_kehadiran{
   clear: left;
+  text-align: left;
   position: relative;
   margin-top: 10px;
+  margin-left: 10px;
+}
+
+.list_ucapan .kehadiran1{
+  background-color: green;
+  border-radius: 100px;
+  border-width: 0.1px;
+  height: 12px;
+  width: 12px;
+  font-size: 0.1px;
+}
+
+.list_ucapan .kehadiran2{
+  background-color: red;
+  border-radius: 100px;
+  border-width: 0.1px;
+  height: 7px;
+  width: 7px;
+  font-size: 0.1px;
+  margin-left: 3px;
+}
+
+.list_ucapan .kehadiran3{
+  background-color: yellow;
+  border-radius: 100px;
+  border-width: 0.1px;
+  height: 12px;
+  width: 12px;
+  font-size: 0.1px;
 }
 
 /*===========================
