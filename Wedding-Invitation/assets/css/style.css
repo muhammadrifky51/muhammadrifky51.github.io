@@ -2023,11 +2023,11 @@ box-sizing: border-box;
 input[type="text"] {
   padding: 4px;
   height: 35px;
-  width: 30em;
   border: 1px solid black;
   /*margin: 10px;*/
   border-radius: 3px;
   flex-grow: 1;
+  /*width: 30em;*/
 }
 
 textarea[type="text"] {
@@ -2038,7 +2038,7 @@ textarea[type="text"] {
   border-radius: 3px;
   flex-grow: 1;
   resize: none;
-  width: 30em;
+  /*width: 30em;*/
 }
 
 .ucapan_label {
@@ -2171,7 +2171,10 @@ textarea[type="text"] {
 
 .ucapan_area .list_ucapan{
   background-color: #ffffff9d;
-  background-image:url("./assets/images/Bunga1.png");
+  background-image:url("../images/OrnamenBiru.png");
+  background-size:contain;
+  background-position: right;
+  background-repeat: no-repeat;
   z-index: 3;
   display: inline-block;
   width: 75%;
