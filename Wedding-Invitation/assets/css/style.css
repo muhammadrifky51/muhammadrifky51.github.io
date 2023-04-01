@@ -2067,6 +2067,14 @@ textarea[type="text"] {
   position: relative;
 }
 
+.ucapan_area input[type="text"]{
+  width: 30rem;
+}
+
+.ucapan_area textarea[type="text"]{
+  width: 30rem;
+}
+
 .ucapan_area .ucapan_kehadiran{
   list-style-type: none;
   /*margin: 25px 0 0 0;*/
@@ -2083,10 +2091,6 @@ textarea[type="text"] {
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-.ucapan_kehadiran input[type="text"]{
-  width: 75%;
 }
 
 .ucapan_kehadiran input[type="radio"]{
