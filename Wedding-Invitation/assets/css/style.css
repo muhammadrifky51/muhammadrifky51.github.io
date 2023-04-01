@@ -2243,9 +2243,10 @@ textarea[type="text"] {
   background-color: green;
   border-radius: 100px;
   border-width: 0.1px;
-  height: 12px;
-  width: 12px;
-  font-size: 0.1px;
+  height: 7px;
+  width: 7px;
+  font-size: 0px;
+  margin-left: 3px;
 }
 
 .list_ucapan .kehadiran2{
@@ -2254,7 +2255,7 @@ textarea[type="text"] {
   border-width: 0.1px;
   height: 7px;
   width: 7px;
-  font-size: 0.1px;
+  font-size: 0px;
   margin-left: 3px;
 }
 
@@ -2262,9 +2263,10 @@ textarea[type="text"] {
   background-color: yellow;
   border-radius: 100px;
   border-width: 0.1px;
-  height: 12px;
-  width: 12px;
-  font-size: 0.1px;
+  height: 7px;
+  width: 7px;
+  font-size: 0px;
+  margin-left: 3px;
 }
 
 /*===========================
