@@ -2023,7 +2023,7 @@ box-sizing: border-box;
 input[type="text"] {
   padding: 4px;
   height: 35px;
-  width: 450px;
+  width: 30em;
   border: 1px solid black;
   /*margin: 10px;*/
   border-radius: 3px;
@@ -2033,12 +2033,12 @@ input[type="text"] {
 textarea[type="text"] {
   padding: 4px;
   height: 150px;
-  width: 450px;
   border: 1px solid black;
   /*margin: 10px;*/
   border-radius: 3px;
   flex-grow: 1;
   resize: none;
+  width: 30em;
 }
 
 .ucapan_label {
@@ -2065,14 +2065,6 @@ textarea[type="text"] {
   width: 120px;
   height: 40px;
   position: relative;
-}
-
-.ucapan_area input[type="text"]{
-  width: 30rem;
-}
-
-.ucapan_area textarea[type="text"]{
-  width: 30rem;
 }
 
 .ucapan_area .ucapan_kehadiran{
@@ -2179,6 +2171,7 @@ textarea[type="text"] {
 
 .ucapan_area .list_ucapan{
   background-color: #ffffff9d;
+  background-image:url("./assets/images/Bunga1.png");
   z-index: 3;
   display: inline-block;
   width: 75%;
@@ -2187,6 +2180,7 @@ textarea[type="text"] {
   border-style: solid;
   border-width: 0.5px;
   overflow-y:auto;
+  box-shadow: 0px 5px 5px 0px rgba(80, 80, 200, 0.5);
 }
 
 .list_ucapan .bubble{
@@ -2203,6 +2197,7 @@ textarea[type="text"] {
   margin-left: 10px;
   margin-bottom: 15px;
   height: fit-content;
+  box-shadow: 0px 5px 5px 0px rgba(80, 80, 200, 0.5);
 }
 
 .list_ucapan .bubble:before {
@@ -2246,6 +2241,7 @@ textarea[type="text"] {
   position: relative;
   margin-top: 10px;
   margin-left: 10px;
+  width: fit-content;
 }
 
 .list_ucapan .kehadiran1{
