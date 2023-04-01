@@ -937,9 +937,20 @@ p {
 /*===========================
      03.COUPLE css 
 ===========================*/
+.couple_transition {
+  background-color: #B5F2F7;
+  position: relative;
+  z-index: 9;
+  overflow: hidden; }
+
 .couple_area {
   background-color: #1AD9E9;
 }
+
+.couple_area .section_title img {
+  width: 500px; 
+  height: auto;}
+
 .single_couple .couple_image {
   overflow: hidden;
   border-radius: 10%; 
@@ -1699,7 +1710,7 @@ p.form-message.success, p.form-message.error {
      13.DOA css 
 ===========================*/
 .doa_area {
-  background-color: #B5F2F7;
+  background-color: #40D5E1; /*#B5F2F7*/
   position: relative;
   z-index: 9;
   overflow: hidden; }
@@ -1815,6 +1826,10 @@ p.form-message.success, p.form-message.error {
 /*===========================
      15.AKAD css 
 ===========================*/
+.akad_transition {
+  background-color: #1AD9E9;
+}
+
 .akad_area {
   background-color: #B5F2F7;
 }
@@ -1931,6 +1946,172 @@ box-sizing: border-box;
   margin-right: 30%;
 }
 
+/*===========================
+     16.DALIL css 
+===========================*/
+.dalil_area {
+  background-color: #B5F2F7;
+  position: relative;
+  z-index: 9;
+  overflow: hidden; }
+
+.dalil_area .section_title img {
+  width: 500px; 
+  height: auto;}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .dalil_area .section_title img {
+    width: 500px; 
+    height: auto; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .dalil_area .section_title img {
+    width: 400px; 
+    height: auto; } }
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .dalil_area .section_title img {
+    width: 300px; 
+    height: auto; } }
+@media (max-width: 767px) {
+  .dalil_area .section_title img {
+    width: 300px; 
+    height: auto; } }
+
+.dalil_content p {
+  font-size: 20px;
+  margin: -10px;
+  padding: 25px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .dalil_content p {
+    font-size: 20px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .dalil_content p {
+    font-size: 18px; } }
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .dalil_content p {
+    font-size: 16px; } }
+@media (max-width: 767px) {
+  .dalil_content p {
+    font-size: 15px; } }
+
+.dalil_content img {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: auto;
+  height: 50px;}
+
+
+/*===========================
+     17.UCAPAN css 
+===========================*/
+
+.ucapan_area{
+  background-color: #40D5E1;
+  position: relative;
+  z-index: 9;
+  overflow: hidden; 
+  list-style-type: none;
+}
+
+.ucapan_area h1{
+  font-family: sofia;
+  padding-bottom:20pt
+}
+
+input[type="text"] {
+  padding: 4px;
+  height: 35px;
+  width: 450px;
+  border: 1px solid black;
+  /*margin: 10px;*/
+  border-radius: 3px;
+  flex-grow: 1;
+}
+
+textarea[type="text"] {
+  padding: 4px;
+  height: 150px;
+  width: 450px;
+  border: 1px solid black;
+  /*margin: 10px;*/
+  border-radius: 3px;
+  flex-grow: 1;
+  resize: none;
+}
+
+.ucapan_label {
+  position: relative;
+}
+
+.ucapan_row {
+  flex-direction: row;
+  display: flex;
+}
+
+.ucapan_panel {
+  background-color: #b7bcbe;
+}
+
+.row.align-item-start{
+  align-items: flex-start;
+  display: inline-flex;
+}
+
+.ucapan_area li{
+  float: left;
+  margin: 0 5px 0 0;
+  width: 140px;
+  height: 40px;
+  position: relative;
+}
+
+.ucapan_area .ucapan_kehadiran{
+  list-style-type: none;
+  /*margin: 25px 0 0 0;*/
+  padding: 0;
+  padding-top: 4px;
+}
+
+.ucapan_kehadiran label,
+.ucapan_kehadiran input{
+  display: block;
+  position: absolute;
+  background-color: #c2e4f0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.ucapan_kehadiran input[type="radio"]{
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.ucapan_kehadiran .ijo input[type="radio"]:checked+label {
+  background: green;
+}
+
+.ucapan_kehadiran .kuning input[type="radio"]:checked+label {
+  background: yellow;
+}
+
+.ucapan_kehadiran .merah input[type="radio"]:checked+label {
+  background: red;
+}
+
+.ucapan_kehadiran input,
+.ucapan_kehadiran label {
+  padding: 5px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  z-index: 90;
+  border-radius: 25px;
+  font-size: small;
+}
+
+.ucapan_kehadiran label:hover {
+  background: #DDD;
+}
 
 /* Button */
 .btn {
@@ -2084,8 +2265,3 @@ box-sizing: border-box;
 .gallery_content a {
   z-index: 1;
 }
-
-
-/*===========================
-     16.Ucapan & Doa css 
-===========================*/

@@ -31,6 +31,9 @@ body {
   background-color: white;
   color: black;}
 
+  body{
+    background-color: white;
+  }
   @media (prefers-color-scheme: light) {
     body {
       background-color: white;
@@ -1710,7 +1713,7 @@ p.form-message.success, p.form-message.error {
      13.DOA css 
 ===========================*/
 .doa_area {
-  background-color: #B5F2F7;
+  background-color: #40D5E1; /*#B5F2F7*/
   position: relative;
   z-index: 9;
   overflow: hidden; }
@@ -1826,6 +1829,10 @@ p.form-message.success, p.form-message.error {
 /*===========================
      15.AKAD css 
 ===========================*/
+.akad_transition {
+  background-color: #1AD9E9;
+}
+
 .akad_area {
   background-color: #B5F2F7;
 }
@@ -1941,6 +1948,368 @@ box-sizing: border-box;
   margin-left: 30%;
   margin-right: 30%;
 }
+
+/*===========================
+     16.DALIL css 
+===========================*/
+.dalil_area {
+  background-color: #B5F2F7;
+  position: relative;
+  z-index: 9;
+  overflow: hidden; }
+
+.dalil_area .section_title img {
+  width: 500px; 
+  height: auto;}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .dalil_area .section_title img {
+    width: 500px; 
+    height: auto; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .dalil_area .section_title img {
+    width: 400px; 
+    height: auto; } }
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .dalil_area .section_title img {
+    width: 300px; 
+    height: auto; } }
+@media (max-width: 767px) {
+  .dalil_area .section_title img {
+    width: 300px; 
+    height: auto; } }
+
+.dalil_content p {
+  font-size: 20px;
+  margin: -10px;
+  padding: 25px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .dalil_content p {
+    font-size: 20px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .dalil_content p {
+    font-size: 18px; } }
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .dalil_content p {
+    font-size: 16px; } }
+@media (max-width: 767px) {
+  .dalil_content p {
+    font-size: 15px; } }
+
+.dalil_content img {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: auto;
+  height: 50px;}
+
+
+/*===========================
+     17.UCAPAN css 
+===========================*/
+
+.ucapan_area{
+  background-color: #40D5E1;
+  position: relative;
+  z-index: 9;
+  overflow: hidden; 
+  list-style-type: none;
+}
+
+.ucapan_area h1{
+  font-family: sofia;
+  padding-bottom:20pt
+}
+
+input[type="text"] {
+  padding: 4px;
+  height: 35px;
+  width: 450px;
+  border: 1px solid black;
+  /*margin: 10px;*/
+  border-radius: 3px;
+  flex-grow: 1;
+}
+
+textarea[type="text"] {
+  padding: 4px;
+  height: 150px;
+  width: 450px;
+  border: 1px solid black;
+  /*margin: 10px;*/
+  border-radius: 3px;
+  flex-grow: 1;
+  resize: none;
+}
+
+.ucapan_label {
+  position: relative;
+}
+
+.ucapan_row {
+  flex-direction: row;
+  display: flex;
+}
+
+.ucapan_panel {
+  background-color: #b7bcbe;
+}
+
+.row.align-item-start{
+  align-items: flex-start;
+  display: inline-flex;
+}
+
+.ucapan_area li{
+  float: left;
+  margin: 0 5px 0 0;
+  width: 140px;
+  height: 40px;
+  position: relative;
+}
+
+.ucapan_area .ucapan_kehadiran{
+  list-style-type: none;
+  /*margin: 25px 0 0 0;*/
+  padding: 0;
+  padding-top: 4px;
+}
+
+.ucapan_kehadiran label,
+.ucapan_kehadiran input{
+  display: block;
+  position: absolute;
+  background-color: #c2e4f0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.ucapan_kehadiran input[type="radio"]{
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.ucapan_kehadiran input[type="radio"]:hover+label{
+  padding-top: 8px;
+  font-size: medium;
+  transition: 0.2s;
+  width: 100.1%;
+  height: 100.1%;
+  box-shadow: 0px 5px 5px 0px rgba(80, 80, 200, 0.5);
+  border-radius: 20px;
+}
+
+.ucapan_kehadiran .ijo input[type="radio"]:checked+label {
+  background: rgb(29, 175, 29);
+}
+
+.ucapan_kehadiran .kuning input[type="radio"]:checked+label {
+  background: rgb(243, 243, 15);
+}
+
+.ucapan_kehadiran .merah input[type="radio"]:checked+label {
+  background: rgb(241, 75, 75);
+}
+
+.ucapan_kehadiran input,
+.ucapan_kehadiran label {
+  padding: 5px;
+  border: 1px solid #000000;
+  cursor: pointer;
+  z-index: 90;
+  border-radius: 25px;
+  font-size: small;
+}
+
+.ucapan_kehadiran label:hover {
+  background: #DDD;
+}
+
+.ucapan_area input[type="submit"]{
+  background: #c2e4f0;
+  border: 1px solid #006391;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.ucapan_area input[type="submit"]:hover{
+  animation: wiggle 2.5s ;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+@keyframes wiggle{
+  0% { transform: rotate(0deg); }
+  5% { transform: rotate(10deg); }
+  10% { transform: rotate(-10deg); }
+  15% { transform: rotate(10deg); }
+  20% { transform: rotate(-10deg); }
+  25% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.ucapan_area .list_ucapan{
+  background-color: #ffffff9d;
+  z-index: 3;
+  display: inline-block;
+  width: 75%;
+  max-height: 500px;
+  border-color: #000000;
+  border-style: solid;
+  border-width: 0.5px;
+  overflow-y:auto;
+}
+
+.list_ucapan .bubble{
+  clear: left;
+  z-index: 2;
+  background-color: #5dd1da;
+  width: fit-content;
+  position: relative;
+  padding: 4px;
+  border-radius: 25px;
+  /*border-color: #000000;
+  border-style: solid;
+  border-width: 0.1px;*/
+  margin-left: 10px;
+  margin-bottom: 15px;
+  height: fit-content;
+}
+
+.list_ucapan .bubble:before {
+/*
+  content: "";
+  position: absolute;
+  z-index:-1;
+  left: -22px;
+  top: 0;
+  width: 40px;
+  border-bottom: 20px solid #5dd1da;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px ;
+*/
+  content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	bottom: 95%;
+	left: 0.7em;
+	border: .5rem solid transparent;
+	border-top: none;
+  border-bottom-color: #5dd1da;
+}
+/*
+.list_ucapan .bubble:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -28px;
+  top: -3px;
+  height: 38px;
+  width: 28px;
+  background: #afbabb;
+  border-top-right-radius: 20px;
+}
+*/
+.list_ucapan .nama_dan_kehadiran{
+  clear: left;
+  text-align: left;
+  position: relative;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.list_ucapan .kehadiran1{
+  background-color: green;
+  border-radius: 100px;
+  border-width: 0.1px;
+  height: 12px;
+  width: 12px;
+  font-size: 0.1px;
+}
+
+.list_ucapan .kehadiran2{
+  background-color: red;
+  border-radius: 100px;
+  border-width: 0.1px;
+  height: 7px;
+  width: 7px;
+  font-size: 0.1px;
+  margin-left: 3px;
+}
+
+.list_ucapan .kehadiran3{
+  background-color: yellow;
+  border-radius: 100px;
+  border-width: 0.1px;
+  height: 12px;
+  width: 12px;
+  font-size: 0.1px;
+}
+
+/*===========================
+     18.Floating Button css 
+===========================*/
+
+.floating-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index:50;
+}
+
+.floating-button-container button {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+  border-radius: 25%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.floating-button-container button:hover {
+  cursor: pointer;
+  animation: wiggle 2.5s
+}
+
+.floating-button-container button i {
+  content: "\23F8";
+  font-size: 25px;
+  color: black;
+}
+
+.floating-button-container button i:before {
+  content: "\23F8";
+}
+
+.floating-button-container button.playing i:before {
+  content: "\23F8";
+}
+
+.floating-button-container button.paused i:before {
+  content: "\23F5";
+}
+
 
 
 /* Button */
@@ -2095,8 +2464,3 @@ box-sizing: border-box;
 .gallery_content a {
   z-index: 1;
 }
-
-
-/*===========================
-     16.Ucapan & Doa css 
-===========================*/
