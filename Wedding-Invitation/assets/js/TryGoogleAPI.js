@@ -1,6 +1,7 @@
 fetch('https://sheets.googleapis.com/v4/spreadsheets/1U_apKzNzsmmV_3DvFxjnI8t7G67ELZisDm5pOIxiLpk/values/Tablenya?key=AIzaSyBWLiCwazxX-joobuNWWeJ_0_CKCGT77rk')
-  .then(response => response.json())
+  .then(response =>response.json())
   .then(data => {
+    console.log(data)
     console.log(data.values)
     kotaknya = document.getElementById("kotak_ucapan")
     for (let i = 1; i<data.values.length; i++){
@@ -13,9 +14,9 @@ fetch('https://sheets.googleapis.com/v4/spreadsheets/1U_apKzNzsmmV_3DvFxjnI8t7G6
 
       const statusnya=document.createElement("a")
       statusnya.innerText="a"
-      if (data.values[i][1]="Hadir"){
+      if (data.values[i][1]=="Hadir"){
         statusnya.setAttribute("class","kehadiran1")
-      } else if (data.values[i][1]="TakHadir"){ 
+      } else if (data.values[i][1]=="TakHadir"){ 
         console.log(data.values[i][1])
         statusnya.setAttribute("class","kehadiran2")
       } else {
