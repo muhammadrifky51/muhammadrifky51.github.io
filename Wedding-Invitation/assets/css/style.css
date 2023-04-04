@@ -2179,9 +2179,9 @@ textarea[type="text"] {
 .ucapan_area .list_ucapan{
   background-color: #ffffff9d;
   background-image:url("../images/OrnamenBiru.png");
-  background-size:contain;
+  background-size:500px;
   background-position: right;
-  background-repeat: no-repeat;
+  background-repeat:no-repeat;
   z-index: 3;
   display: inline-block;
   width: 75%;
