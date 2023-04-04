@@ -2316,6 +2316,7 @@ textarea[type="text"] {
   content:url('../images/pause-button-resize.png');
   width: 2vh;
   height: 2vh;
+  position: relative;
 }
 
 .floating-button-container button i:before {
@@ -2323,6 +2324,7 @@ textarea[type="text"] {
   content:url('../images/pause-button-resize.png');
   width: 2vh;
   height: 2vh;
+  position: relative;
 }
 
 .floating-button-container button.playing i:before {
@@ -2330,6 +2332,7 @@ textarea[type="text"] {
   content:url('../images/pause-button-resize.png');
   width: 2vh;
   height: 2vh;
+  position: relative;
 }
 
 .floating-button-container button.playing i{
@@ -2337,6 +2340,7 @@ textarea[type="text"] {
   content:url('../images/pause-button-resize.png');
   width: 2vh;
   height: 2vh;
+  position: relative;
 }
 
 .floating-button-container button.paused i:before {
@@ -2344,6 +2348,7 @@ textarea[type="text"] {
   content:url('../images/play-button-resize.png');
   width: 2vh;
   height: 2vh;
+  position: relative;
 }
 
 .floating-button-container button.paused i{
@@ -2351,6 +2356,7 @@ textarea[type="text"] {
   content:url('../images/play-button-resize.png');
   width: 2vh;
   height: 2vh;
+  position: relative;
 }
 
 
