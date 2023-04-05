@@ -64,20 +64,43 @@ document.querySelector('form').addEventListener('submit', function(e) {
 
   function generateJwtToken(clientEmail, privateKey) {
     const now = Math.floor(Date.now() / 1000);
-    const jwtHeader = btoa(JSON.stringify({ alg: 'HS256', typ: 'JWT' }));
-    const jwtClaimset = btoa(JSON.stringify({
+    const HeadTxt = "{ alg: 'HS256', typ: 'JWT' }"
+    //const jwtHeader = getBase64Encoded(JSON.stringify({ alg: 'HS256', typ: 'JWT' }));
+    const jwtHeader = getBase64Encoded(HeadTxt);
+    const ClaimTxt = `{
       iss: clientEmail,
       sub:clientEmail,
       scope: 'https://www.googleapis.com/auth/spreadsheets',
       aud: 'https://www.googleapis.com/oauth2/v4/token',
-      exp: now + 3600,
-      iat: now
-    }));
-    const jwtSignature =  btoa(`${jwtHeader}.${jwtClaimset}.${privateKey}`);
-    return `${jwtHeader}.${jwtClaimset}.${jwtSignature}`;
+      exp: ${now + 3600},
+      iat: ${now}
+    }`
+    // const jwtClaimset = getBase64Encoded(JSON.stringify({
+    //   iss: clientEmail,
+    //   sub:clientEmail,
+    //   scope: 'https://www.googleapis.com/auth/spreadsheets',
+    //   aud: 'https://www.googleapis.com/oauth2/v4/token',
+    //   exp: now + 3600,
+    //   iat: now
+    // }));
+    const jwtClaimset = getBase64Encoded(ClaimTxt)
+    const jwtSignature =  CryptoJS.HmacSHA256(`${jwtHeader}.${jwtClaimset},${privateKey}`);
+    const Sign64 = CryptoJS.enc.Base64.stringify(jwtSignature)
+    return `${jwtHeader}.${jwtClaimset}.${Sign64}`;
   }
 
-  
+  function getBase64Encoded(rawStr){
+    var wordArray = CryptoJS.enc.Base64.parse(rawStr);
+    var result = CryptoJS.enc.Base64.stringify(wordArray);
+    return result
+  }
+
+  function getBase64Decoded(encStr){
+    var wordArray = CryptoJS.enc.Base64.parse(encStr);
+    var result = wordArray.toString(CryptoJS.enc.Utf8);
+    return result
+  }
+
   //CSV
   //https://1drv.ms/u/s!ArGsxJ1nGw1ciqdV39kRl8jwDSmnBQ?e=ut41dL
 
