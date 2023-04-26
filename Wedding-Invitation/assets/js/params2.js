@@ -46,5 +46,9 @@ if (code) {
         console.error('Error:', error);
       });
   } else {
-    console.log("Blm Login")
+    const tempatnya=document.getElementById("LoginGoogle")
+    const tombolnya=document.createElement("button")
+    tombolnya.setAttribute("onclick","authorize()")
+    tombolnya.innerText="Signin with Google"
+    tempatnya.appendChild(tombolnya)
   }
