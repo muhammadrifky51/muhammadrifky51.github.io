@@ -40,16 +40,25 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         const expiresIn = data.expires_in;
         const refreshToken = data.refresh_token;
         sessionStorage.setItem("accessToken", accessToken);
+        sessionStorage.setItem("expiresIn", expiresIn);
+        sessionStorage.setItem("refreshToken", refreshToken);
   
         console.log(accessToken)
+        console.log(expiresIn)
+        console.log(refreshToken)
       })
       .catch((error) => {
         console.error('Error:', error);
       });
   } else {
     if (sessionStorage.getItem('accessToken')){
-        const accessToken=sessionStorage.getItem('accessToken')
+        const accessToken=sessionStorage.getItem('accessToken');
+        const expiresIn=sessionStorage.getItem('expiresIn');
+        const refreshToken=sessionStorage.getItem('refreshToken');
+
         console.log(accessToken)
+        console.log(expiresIn)
+        console.log(refreshToken)
     } else {
         const tempatnya=document.getElementById("LoginGoogle")
         const tombolnya=document.createElement("button")
