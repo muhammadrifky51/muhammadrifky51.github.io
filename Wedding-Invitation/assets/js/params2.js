@@ -48,7 +48,8 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
       });
   } else {
     if (sessionStorage.getItem('accessToken')){
-        pass
+        const accessToken=sessionStorage.getItem('accessToken')
+        console.log(accessToken)
     } else {
         const tempatnya=document.getElementById("LoginGoogle")
         const tombolnya=document.createElement("button")
