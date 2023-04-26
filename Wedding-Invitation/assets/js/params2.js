@@ -11,7 +11,7 @@ else{
 }
 
 const code = params.get("code");
-if ((code) && ~(sessionStorage.getItem('accessToken'))) {
+if ((code) && !(sessionStorage.getItem('accessToken'))) {
     const clientId = '425332619627-mmdod0nr7ggqnodk02f18c2jhjgeansf.apps.googleusercontent.com';
     const clientSecret = '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';
     const redirectUri = 'https://muhammadrifky51.github.io/Wedding-Invitation/Undangan.html?S='+S;
