@@ -62,8 +62,14 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
     } else {
         const tempatnya=document.getElementById("LoginGoogle")
         const tombolnya=document.createElement("button")
+        const textnya=document.createElement("p")
+
+        textnya.innerText="Signin with google for leaving the messages"
+        
         tombolnya.setAttribute("onclick","authorize()")
         tombolnya.innerText="Signin with Google"
+        
+        tempatnya.appendChild(textnya)
         tempatnya.appendChild(tombolnya)
     }
   }
