@@ -11,7 +11,7 @@ else{
 }
 
 const code = params.get("code");
-if ((code) && (sessionStorage.getItem('access_token'))) {
+if ((code) && (sessionStorage.getItem('accessToken'))) {
     const clientId = '425332619627-mmdod0nr7ggqnodk02f18c2jhjgeansf.apps.googleusercontent.com';
     const clientSecret = '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';
     const redirectUri = 'https://muhammadrifky51.github.io/Wedding-Invitation/Undangan.html?S='+S;
@@ -46,7 +46,7 @@ if ((code) && (sessionStorage.getItem('access_token'))) {
         console.error('Error:', error);
       });
   } else {
-    if (sessionStorage.getItem('access_token')){
+    if (sessionStorage.getItem('accessToken')){
         pass
     } else {
         const tempatnya=document.getElementById("LoginGoogle")
