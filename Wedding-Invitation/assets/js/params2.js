@@ -46,6 +46,9 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         console.log(accessToken)
         console.log(expiresIn)
         console.log(refreshToken)
+
+        window.location = 'https://muhammadrifky51.github.io/Wedding-Invitation/Undangan.html?S='+S;
+
       })
       .catch((error) => {
         console.error('Error:', error);
