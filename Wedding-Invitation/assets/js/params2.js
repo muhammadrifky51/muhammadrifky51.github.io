@@ -62,6 +62,11 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         console.log(accessToken)
         console.log(expiresIn)
         console.log(refreshToken)
+
+        const textsignoutnya=document.getElementById("textsignout")
+        textsignoutnya.innerText="Ganti akun?"
+        textsignoutnya.style="color: #40D5E1;"
+        textsignoutnya.setAttribute("onclick","unauthorized()")
     } else {
         const tempatnya=document.getElementById("LoginGoogle")
         const tombolnya=document.createElement("button")
@@ -74,5 +79,9 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         
         tempatnya.appendChild(textnya)
         tempatnya.appendChild(tombolnya)
+
+        const textsignoutnya=document.getElementById("textsignout")
+        textsignoutnya.innerText="*"
+        textsignoutnya.style="color: red;"
     }
   }

@@ -20,3 +20,11 @@ function authorize() {
   
     window.location.href = url;
   }
+
+function unauthorized(){
+    sessionStorage.removeItem("accessToken")
+    sessionStorage.removeItem("expiresIn")
+    sessionStorage.removeItem("refreshToken")
+
+    window.location.reload();
+}
