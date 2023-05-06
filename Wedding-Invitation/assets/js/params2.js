@@ -65,7 +65,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
 
         const textsignoutnya=document.getElementById("textsignout")
         textsignoutnya.innerText="Ganti akun?"
-        textsignoutnya.style="color: #1533bd;cursor: pointer;font-size:smaller;"
+        textsignoutnya.style="color: #00146b;cursor: pointer;font-size:smaller;"
         textsignoutnya.setAttribute("onclick","unauthorized()")
     } else {
         const tempatnya=document.getElementById("LoginGoogle")
