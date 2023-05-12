@@ -29,7 +29,7 @@ function unauthorized(){
 
     //document.location.href = `https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=${window.location.href}`;
     
-    document.location = 'https://www.google.com/accounts/Logout';StartPollingForCompletion();return window.location.reload();
+    document.location = 'https://www.google.com/accounts/Logout';StartPollingForCompletion();window.location.reload();return false;
     //window.location.reload();
 }
 
