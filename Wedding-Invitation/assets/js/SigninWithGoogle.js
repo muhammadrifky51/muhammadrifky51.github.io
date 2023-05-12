@@ -35,17 +35,14 @@ function unauthorized(){
 
 function getuser() {
     const accessToken=sessionStorage.getItem("accessToken")
-    const uri="https://www.googleapis.com/oauth2/v2/userinfo"
+    const uri=`https://www.googleapis.com/oauth2/v2/userinfo?alt=json&access_token=${accessToken}`
 
     if(sessionStorage.getItem("namaPengguna")){
-    fetch(uri,{
-        method:'GET',
-        headers:{
-            'Authorization':`Bearer ${accessToken}`
-        }
-    })
-    .then((response)=>{
-        console.log(response)
+    fetch(uri)
+    .then((response)=>response.json())
+    .then((data)=>{
+        sessionStorage.setItem("namaPengguna",data.name)
+        console.log(data)
     })
     }
 }
