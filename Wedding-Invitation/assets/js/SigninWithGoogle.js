@@ -27,8 +27,9 @@ function unauthorized(){
     sessionStorage.removeItem("refreshToken")
     sessionStorage.removeItem("namaPengguna")
 
-    document.location.href = `https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=${window.location.href}`;
-
+    //document.location.href = `https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=${window.location.href}`;
+    
+    document.location = 'https://www.google.com/accounts/Logout';StartPollingForCompletion();return window.location.reload();
     //window.location.reload();
 }
 
