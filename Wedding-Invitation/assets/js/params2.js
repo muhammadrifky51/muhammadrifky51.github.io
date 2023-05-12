@@ -70,7 +70,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         const labelnama=document.createElement("label")
         labelnama.htmlFor="nama"
         labelnama.className="ucapan_label"
-        labelnama.innerHTML="Nama:<span onlick=unauthorized() style=\"color: #00146b;cursor: pointer;font-size:smaller;\">Ganti akun?</span>"
+        labelnama.innerHTML="Nama:<span onlick=\"unauthorized()\" style=\"color: #00146b;cursor: pointer;font-size:smaller;\">Ganti akun?</span>"
         formcuapcuap.appendChild(labelnama)
         formcuapcuap.appendChild(brkln)
 
