@@ -70,14 +70,14 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         const labelnama=document.createElement("label")
         labelnama.htmlFor="nama"
         labelnama.className="ucapan_label"
-        labelnama.innerHTML="Nama:<span id=\"textsignout\"></span>"
+        labelnama.innerHTML="Nama:<span onlick=unauthorized() style=\"color: #00146b;cursor: pointer;font-size:smaller;\">Ganti akun?</span>"
         formcuapcuap.appendChild(labelnama)
         formcuapcuap.appendChild(brkln)
 
-        const textsignoutnya=document.getElementById("textsignout")
-        textsignoutnya.innerText="Ganti akun?"
-        textsignoutnya.style="color: #00146b;cursor: pointer;font-size:smaller;"
-        textsignoutnya.setAttribute("onclick","unauthorized()")
+        //const textsignoutnya=document.getElementById("textsignout")
+        //textsignoutnya.innerText="Ganti akun?"
+        //textsignoutnya.style="color: #00146b;cursor: pointer;font-size:smaller;"
+        //textsignoutnya.setAttribute("onclick","unauthorized()")
     } else {
         const tempatnya=document.getElementById("LoginGoogle")
         const tombolnya=document.createElement("button")
