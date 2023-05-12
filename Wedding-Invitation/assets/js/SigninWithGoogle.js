@@ -43,6 +43,7 @@ function getuser() {
     .then((data)=>{
         sessionStorage.setItem("namaPengguna",data.name)
         console.log(data)
+        console.log(response)
     })
     }
 }
