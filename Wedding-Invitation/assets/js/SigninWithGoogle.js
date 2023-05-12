@@ -44,6 +44,7 @@ function getuser() {
         sessionStorage.setItem("namaPengguna",data.name)
         console.log(data)
         console.log(response)
+        console.log(response.json())
     })
     }
 }
