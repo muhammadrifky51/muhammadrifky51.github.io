@@ -36,7 +36,7 @@ function getuser() {
     const accessToken=sessionStorage.getItem("accessToken")
     const uri="https://www.googleapis.com/oauth2/v2/userinfo"
 
-    if(namaPengguna){
+    if(sessionStorage.getItem("namaPengguna")){
     fetch(uri,{
         method:'GET',
         headers:{
