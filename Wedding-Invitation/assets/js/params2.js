@@ -47,7 +47,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         console.log(expiresIn)
         console.log(refreshToken)
 
-        getuser()
+        getuser();
 
         window.location = redirectUri
 
