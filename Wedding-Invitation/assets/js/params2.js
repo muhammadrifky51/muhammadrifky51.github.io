@@ -70,9 +70,23 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         const labelnama=document.createElement("label")
         labelnama.htmlFor="nama"
         labelnama.className="ucapan_label"
-        labelnama.innerHTML="Nama:<span onlick=\"unauthorized()\" style=\"color: #00146b;cursor: pointer;font-size:smaller;\">Ganti akun?</span>"
+        labelnama.innerHTML="Nama:"
         formcuapcuap.appendChild(labelnama)
+
+        const textsignoutnya=document.createElement("span")
+        textsignoutnya.innerText="Ganti akun?"
+        textsignoutnya.style="color: #00146b;cursor: pointer;font-size:smaller;"
+        textsignoutnya.setAttribute("onclick","unauthorized()")
+
+        formcuapcuap.appendChild(textsignoutnya)
         formcuapcuap.appendChild(brkln)
+
+        const inputnama=document.createElement("input")
+        inputnama.type="text"
+        inputnama.name="nama"
+        inputnama.id="nama"
+        inputnama.rows="1"
+        
 
         //const textsignoutnya=document.getElementById("textsignout")
         //textsignoutnya.innerText="Ganti akun?"
