@@ -72,10 +72,11 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         const tombolnya=document.createElement("button")
         const textnya=document.createElement("p")
 
-        textnya.innerText="Signin with google for leaving the messages"
+        textnya.innerText= "Signin with google for leaving the messages"
         
         tombolnya.setAttribute("onclick","authorize()")
-        tombolnya.innerText="Signin with Google"
+        tombolnya.innerHTML="<img src=\"assets/images/Glogo.png\" style=\"width:1em;height:1em\"> Signin with Google"
+        tombolnya.className="loginwithgoogle"
         
         tempatnya.appendChild(textnya)
         tempatnya.appendChild(tombolnya)

@@ -2081,6 +2081,10 @@ textarea[type="text"] {
   padding-top: 4px;
 }
 
+.ucapan_area .loginwithgoogle{
+  border-radius: 5px;
+}
+
 .ucapan_kehadiran label,
 .ucapan_kehadiran input{
   display: block;
