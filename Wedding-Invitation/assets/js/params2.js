@@ -63,6 +63,17 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         console.log(expiresIn)
         console.log(refreshToken)
 
+        const formcuapcuap=document.getElementById("formcuapcuap")
+        const brkln=document.createElement("span")
+        brkln.innerHTML="<br>"
+
+        const labelnama=document.createElement("label")
+        labelnama.htmlFor="nama"
+        labelnama.className="ucapan_label"
+        labelnama.innerHTML="Nama:<span id=\"textsignout\"></span>"
+        formcuapcuap.appendChild(labelnama)
+        formcuapcuap.appendChild(brkln)
+
         const textsignoutnya=document.getElementById("textsignout")
         textsignoutnya.innerText="Ganti akun?"
         textsignoutnya.style="color: #00146b;cursor: pointer;font-size:smaller;"
