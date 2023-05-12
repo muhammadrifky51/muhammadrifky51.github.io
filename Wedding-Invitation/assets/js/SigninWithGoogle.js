@@ -44,10 +44,8 @@ function getuser() {
             'Authorization':`Bearer ${accessToken}`
         }
     })
-    .then((response)=>response.json())
-    .then((data)=>{
-        sessionStorage.setItem("namaPengguna",data.name)
-        console.log(data)
+    .then((response)=>{
+        console.log(response)
     })
     }
 }
