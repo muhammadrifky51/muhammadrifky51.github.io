@@ -66,8 +66,8 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         console.log(refreshToken)
 
         const formcuapcuap=document.getElementById("formcuapcuap")
-        const brkln=document.createElement("p")
-        brkln.innerHTML="<br>"
+        const brkln=document.createElement("br")
+        //brkln.innerHTML="<br>"
 
         const labelnama=document.createElement("label")
         labelnama.htmlFor="nama"
