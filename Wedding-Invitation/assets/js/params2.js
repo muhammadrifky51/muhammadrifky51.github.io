@@ -66,7 +66,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         console.log(refreshToken)
 
         const formcuapcuap=document.getElementById("formcuapcuap")
-        const brkln=document.createElement("br")
+        //const brkln=document.createElement("br")
         //brkln.innerHTML="<br>"
 
         const labelnama=document.createElement("label")
@@ -81,7 +81,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         textsignoutnya.setAttribute("onclick","unauthorized()")
 
         formcuapcuap.appendChild(textsignoutnya)
-        formcuapcuap.appendChild(brkln)
+        formcuapcuap.appendChild(document.createElement("br"))
 
         const inputnama=document.createElement("input")
         inputnama.type="text"
@@ -91,7 +91,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         inputnama.placeholder="Namamu disini"
         inputnama.readOnly=true
         formcuapcuap.appendChild(inputnama)
-        formcuapcuap.appendChild(brkln)
+        formcuapcuap.appendChild(document.createElement("br"))
 
         const pilihankehadiran=document.createElement("ul")
         pilihankehadiran.className="ucapan_kehadiran row align-item-start"
@@ -149,7 +149,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         pilihankehadiran.appendChild(pilihanmerah)
 
         formcuapcuap.appendChild(pilihankehadiran)
-        formcuapcuap.appendChild(brkln)
+        formcuapcuap.appendChild(document.createElement("br"))
 
         const labelucapan=document.createElement("label")
         const bintangnyaucapan=document.createElement("span")
@@ -159,7 +159,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         bintangnyaucapan.innerText="*"
         labelucapan.appendChild(bintangnyaucapan)
         formcuapcuap.appendChild(labelucapan)
-        formcuapcuap.appendChild(brkln)
+        formcuapcuap.appendChild(document.createElement("br"))
 
         const textucapan=document.createElement("textarea")
         textucapan.type="text"
@@ -168,8 +168,8 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         textucapan.rows="5"
         textucapan.required=true
         formcuapcuap.appendChild(textucapan)
-        formcuapcuap.appendChild(brkln)
-        formcuapcuap.appendChild(brkln)
+        formcuapcuap.appendChild(document.createElement("br"))
+        formcuapcuap.appendChild(document.createElement("br"))
 
         const submitbutton=document.createElement("input")
         submitbutton.type="submit"
