@@ -29,7 +29,8 @@ function unauthorized(){
 
     //document.location.href = `https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=${window.location.href}`;
     
-    document.location = 'https://www.google.com/accounts/Logout';StartPollingForCompletion();window.location.href = redirectUri;return false;
+    document.location = 'https://www.google.com/accounts/Logout';StartPollingForCompletion();return false;
+    //window.location.href = redirectUri;
     //window.location.reload();
 }
 
