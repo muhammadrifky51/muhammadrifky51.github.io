@@ -11,7 +11,7 @@
         mm = String(today.getMonth() + 1).padStart(2, "0"),
         yyyy = today.getFullYear(),
         nextYear = yyyy + 1,
-        wedding = "05/21/2023 08:00:00";
+        wedding = "07/21/2023 08:00:00";
     
     today = mm + "/" + dd + "/" + yyyy;
     if (today > wedding) {
