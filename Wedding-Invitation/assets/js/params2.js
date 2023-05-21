@@ -193,6 +193,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         
         tempatnya.appendChild(textnya)
         tempatnya.appendChild(tombolnya)
+        tempatnya.appendChild(document.createElement("br"))
 
         //const textsignoutnya=document.getElementById("textsignout")
         //textsignoutnya.innerText="*"
