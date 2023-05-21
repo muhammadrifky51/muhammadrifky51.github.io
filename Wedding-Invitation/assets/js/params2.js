@@ -75,6 +75,16 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         labelnama.innerHTML="Nama:"
         formcuapcuap.appendChild(labelnama)
 
+        const inputnama=document.createElement("input")
+        inputnama.type="text"
+        inputnama.name="nama"
+        inputnama.id="nama"
+        inputnama.rows="1"
+        inputnama.placeholder="Namamu disini"
+        inputnama.readOnly=true
+        formcuapcuap.appendChild(inputnama)
+
+
         const textsignoutnya=document.createElement("span")
         textsignoutnya.innerText="Ganti akun?"
         textsignoutnya.style="color: #00146b;cursor: pointer;font-size:smaller;"
@@ -82,12 +92,6 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
 
         formcuapcuap.appendChild(textsignoutnya)
         formcuapcuap.appendChild(brkln)
-
-        const inputnama=document.createElement("input")
-        inputnama.type="text"
-        inputnama.name="nama"
-        inputnama.id="nama"
-        inputnama.rows="1"
         
 
         //const textsignoutnya=document.getElementById("textsignout")
@@ -108,8 +112,8 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         tempatnya.appendChild(textnya)
         tempatnya.appendChild(tombolnya)
 
-        const textsignoutnya=document.getElementById("textsignout")
-        textsignoutnya.innerText="*"
-        textsignoutnya.style="color: red;"
+        //const textsignoutnya=document.getElementById("textsignout")
+        //textsignoutnya.innerText="*"
+        //textsignoutnya.style="color: red;"
     }
   }
