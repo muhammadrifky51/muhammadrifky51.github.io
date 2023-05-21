@@ -75,6 +75,14 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         labelnama.innerHTML="Nama:"
         formcuapcuap.appendChild(labelnama)
 
+        const textsignoutnya=document.createElement("span")
+        textsignoutnya.innerText="Ganti akun?"
+        textsignoutnya.style="color: #00146b;cursor: pointer;font-size:smaller;"
+        textsignoutnya.setAttribute("onclick","unauthorized()")
+
+        formcuapcuap.appendChild(textsignoutnya)
+        formcuapcuap.appendChild(brkln)
+
         const inputnama=document.createElement("input")
         inputnama.type="text"
         inputnama.name="nama"
@@ -83,16 +91,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         inputnama.placeholder="Namamu disini"
         inputnama.readOnly=true
         formcuapcuap.appendChild(inputnama)
-
-
-        const textsignoutnya=document.createElement("span")
-        textsignoutnya.innerText="Ganti akun?"
-        textsignoutnya.style="color: #00146b;cursor: pointer;font-size:smaller;"
-        textsignoutnya.setAttribute("onclick","unauthorized()")
-
-        formcuapcuap.appendChild(textsignoutnya)
         formcuapcuap.appendChild(brkln)
-        
 
         //const textsignoutnya=document.getElementById("textsignout")
         //textsignoutnya.innerText="Ganti akun?"
