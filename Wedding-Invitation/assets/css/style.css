@@ -959,6 +959,7 @@ p {
   overflow: hidden;
   border-radius: 10%; 
   width: 100%; 
+  pointer-events: none;
   margin: 0 auto;}
 
 @media all and (max-width: 991px) {
