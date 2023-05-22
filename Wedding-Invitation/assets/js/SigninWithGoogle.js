@@ -22,7 +22,8 @@ function authorize() {
   }
 
 function unauthorized(){
-    
+    var SignOutWin
+
     sessionStorage.removeItem("accessToken")
     sessionStorage.removeItem("expiresIn")
     sessionStorage.removeItem("refreshToken")
@@ -30,9 +31,9 @@ function unauthorized(){
 
     //document.location.href = `https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=${window.location.href}`;
     
-    const NewWindow=window.open('https://www.google.com/accounts/Logout')
+    SignOutWin=window.open('https://www.google.com/accounts/Logout')
     //StartPollingForCompletion()
-    setTimeout(NewWindow.close(),5000)
+    setTimeout("SignOutWin.close()",5000)
     
     //document.location = 'https://www.google.com/accounts/Logout';StartPollingForCompletion();return false;
     //window.location.href = redirectUri;
