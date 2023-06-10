@@ -3,7 +3,7 @@ function authorize() {
     const params = new URLSearchParams(document.location.search);
     const S1 = params.get("S");
     const redirectUri = 'https://muhammadrifky51.github.io/Wedding-Invitation/Undangan.html?S='+S1;
-    const scope = 'https://www.googleapis.com/auth/drive';
+    const scope = "https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/userinfo.profile";
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let state = '';
 

@@ -34,7 +34,9 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         'Content-Type': 'application/json',
       },
     })
-      .then((response) => response.json())
+      .then((response) => {
+        response.json();
+        console.log(response.json())})
       .then((data) => {
         const accessToken = data.access_token;
         const expiresIn = data.expires_in;
