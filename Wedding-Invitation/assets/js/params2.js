@@ -16,7 +16,9 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
     const clientSecret = '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';
     const redirectUri = 'https://muhammadrifky51.github.io/Wedding-Invitation/Undangan.html?S='+S;
     const grantType = 'authorization_code';
-  
+
+    console.log(code);
+
     const url = 'https://oauth2.googleapis.com/token';
   
     const data = {
