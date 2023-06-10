@@ -167,6 +167,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         textucapan.name="ucapan"
         textucapan.rows="5"
         textucapan.required=true
+        textucapan.style="resize: none"
         formcuapcuap.appendChild(textucapan)
         formcuapcuap.appendChild(document.createElement("br"))
         formcuapcuap.appendChild(document.createElement("br"))
