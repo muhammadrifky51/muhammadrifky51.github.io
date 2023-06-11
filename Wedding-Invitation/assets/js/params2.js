@@ -64,10 +64,12 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         const accessToken=sessionStorage.getItem('accessToken');
         const expiresIn=sessionStorage.getItem('expiresIn');
         const refreshToken=sessionStorage.getItem('refreshToken');
+        const dt=sessionStorage.getItem('dt')
 
         console.log(accessToken)
         console.log(expiresIn)
         console.log(refreshToken)
+        console.log(dt)
 
         const formcuapcuap=document.getElementById("formcuapcuap")
         //const brkln=document.createElement("br")
