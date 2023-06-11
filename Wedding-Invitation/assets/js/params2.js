@@ -125,13 +125,6 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         formcuapcuap.appendChild(labelgantinama)
         formcuapcuap.appendChild(document.createElement("br"))
 
-        if(document.getElementById('gantinama').checked){
-          inputnama.value=sessionStorage.getItem("dt2name")        
-          inputnama.readOnly=true
-        } else{
-          inputnama.readOnly=false
-        }
-
         const pilihankehadiran=document.createElement("ul")
         pilihankehadiran.className="ucapan_kehadiran row align-item-start"
         
