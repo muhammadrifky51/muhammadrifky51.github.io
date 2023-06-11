@@ -42,11 +42,13 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         const expiresIn = data.expires_in;
         const refreshToken = data.refresh_token;
         const dt=Object.keys(data);
+        const dtscope=data.scope;
 
         sessionStorage.setItem("accessToken", accessToken);
         sessionStorage.setItem("expiresIn", expiresIn);
         sessionStorage.setItem("refreshToken", refreshToken);
         sessionStorage.setItem("dt",dt.join(","))
+        sessionStorage.setItem("dtscope",dtscope)
         
         console.log(accessToken)
         console.log(expiresIn)
@@ -66,11 +68,12 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         const expiresIn=sessionStorage.getItem('expiresIn');
         const refreshToken=sessionStorage.getItem('refreshToken');
         const dt=sessionStorage.getItem('dt')
+        const dtscope=sessionStorage.getItem('dtscope')
 
         console.log(accessToken)
         console.log(expiresIn)
         console.log(refreshToken)
-        console.log(dt)
+        console.log(dtscope)
 
         const formcuapcuap=document.getElementById("formcuapcuap")
         //const brkln=document.createElement("br")
