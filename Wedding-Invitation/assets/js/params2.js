@@ -125,11 +125,11 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         formcuapcuap.appendChild(labelgantinama)
         formcuapcuap.appendChild(document.createElement("br"))
 
-        if(document.querySelector('.gantinama').checked="1"){
-          inputnama.readOnly=false
-        } else{
-          inputnama.value=sessionStorage.getItem("dt2name")
+        if(document.getElementById('gantinama').checked){
+          inputnama.value=sessionStorage.getItem("dt2name")        
           inputnama.readOnly=true
+        } else{
+          inputnama.readOnly=false
         }
 
         const pilihankehadiran=document.createElement("ul")
