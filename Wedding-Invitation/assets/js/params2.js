@@ -103,14 +103,31 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         formcuapcuap.appendChild(textsignoutnya)
         formcuapcuap.appendChild(document.createElement("br"))
 
+        const ckbox=document.createElement("input")
+        ckbox.type="checkbox"
+        ckbox.id="gantinama"
+        ckbox.name="gantinama"
+        ckbox.value="1"
+
+        const labelgantinama=document.createElement("label")
+        labelgantinama.htmlFor="gantinama"
+        labelgantinama.className="ucapan_label"
+        labelgantinama.innerHTML="Input Nama manual?"
+
         const inputnama=document.createElement("input")
         inputnama.type="text"
         inputnama.name="nama"
         inputnama.id="nama"
         inputnama.rows="1"
         inputnama.placeholder="Namamu disini"
-        inputnama.readOnly=true
-        formcuapcuap.appendChild(inputnama)
+        if(document.querySelector('.gantinama').checked){
+          inputnama.readOnly=false
+        } else{
+          inputnama.value=sessionStorage.getItem("dt2name")
+          inputnama.readOnly=true
+        }formcuapcuap.appendChild(inputnama)
+        formcuapcuap.appendChild(ckbox)
+        formcuapcuap.appendChild(labelgantinama)
         formcuapcuap.appendChild(document.createElement("br"))
 
         const pilihankehadiran=document.createElement("ul")
