@@ -8,10 +8,3 @@ if (window.innerWidth<480){
 
 document.getElementById('head_id').style.height="100vh"
 document.getElementById('head_id').style.backgroundColor="#B5F2F7"
-
-if(document.getElementById('gantinama').checked){
-    inputnama.readOnly=false
-} else{
-    inputnama.value=sessionStorage.getItem("dt2name")        
-    inputnama.readOnly=true
-}

@@ -108,11 +108,13 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         ckbox.id="gantinama"
         ckbox.name="gantinama"
         ckbox.value="1"
+        ckbox.addEventListener("input",Ganti_Nama_Fun)
 
         const labelgantinama=document.createElement("label")
         labelgantinama.htmlFor="gantinama"
-        labelgantinama.className="ucapan_label"
+        labelgantinama.style="cursor: pointer;font-size:smaller;"
         labelgantinama.innerHTML="Input Nama manual?"
+        
 
         const inputnama=document.createElement("input")
         inputnama.type="text"
@@ -230,5 +232,14 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         //const textsignoutnya=document.getElementById("textsignout")
         //textsignoutnya.innerText="*"
         //textsignoutnya.style="color: red;"
+    }
+  }
+
+  function Ganti_Nama_Fun(){
+    if(document.getElementById('gantinama').checked){
+      inputnama.readOnly=false
+    } else{
+      inputnama.value=sessionStorage.getItem("dt2name")        
+      inputnama.readOnly=true
     }
   }
