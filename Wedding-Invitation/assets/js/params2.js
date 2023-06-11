@@ -237,9 +237,9 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
 
   function Ganti_Nama_Fun(){
     if(document.getElementById('gantinama').checked){
-      inputnama.readOnly=false
+      document.getElementById('nama').readOnly=false
     } else{
-      inputnama.value=sessionStorage.getItem("dt2name")        
-      inputnama.readOnly=true
+      document.getElementById('nama').value=sessionStorage.getItem("dt2name")        
+      document.getElementById('nama').readOnly=true
     }
   }
