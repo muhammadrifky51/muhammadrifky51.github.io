@@ -120,15 +120,17 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         inputnama.id="nama"
         inputnama.rows="1"
         inputnama.placeholder="Namamu disini"
+        formcuapcuap.appendChild(inputnama)
+        formcuapcuap.appendChild(ckbox)
+        formcuapcuap.appendChild(labelgantinama)
+        formcuapcuap.appendChild(document.createElement("br"))
+
         if(document.querySelector('.gantinama').checked){
           inputnama.readOnly=false
         } else{
           inputnama.value=sessionStorage.getItem("dt2name")
           inputnama.readOnly=true
-        }formcuapcuap.appendChild(inputnama)
-        formcuapcuap.appendChild(ckbox)
-        formcuapcuap.appendChild(labelgantinama)
-        formcuapcuap.appendChild(document.createElement("br"))
+        }
 
         const pilihankehadiran=document.createElement("ul")
         pilihankehadiran.className="ucapan_kehadiran row align-item-start"
