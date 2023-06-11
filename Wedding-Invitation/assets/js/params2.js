@@ -73,13 +73,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         console.log(refreshToken)
         console.log(dtscope)
 
-        const data2 = {
-          scope: 'https://www.googleapis.com/auth/userinfo.profile',
-        };
-
-        fetch(`https://www.googleapis.com/oauth2/v3/userinfo?access_token=${accessToken}`,{
-          body: JSON.stringify(data2)
-        })
+        fetch(`https://www.googleapis.com/oauth2/v3/userinfo?access_token=${accessToken}`)
         .then((response)=>response.json())
         .then((data)=>{
           sessionStorage.setItem("dt2",data)
