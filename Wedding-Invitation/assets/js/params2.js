@@ -44,7 +44,8 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         sessionStorage.setItem("accessToken", accessToken);
         sessionStorage.setItem("expiresIn", expiresIn);
         sessionStorage.setItem("refreshToken", refreshToken);
-  
+        
+        console.log(data)
         console.log(accessToken)
         console.log(expiresIn)
         console.log(refreshToken)
