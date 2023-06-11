@@ -54,8 +54,6 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         console.log(expiresIn)
         console.log(refreshToken)
 
-        getuser();
-
         window.location = redirectUri
 
       })
@@ -74,6 +72,19 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         console.log(expiresIn)
         console.log(refreshToken)
         console.log(dtscope)
+
+        const data2 = {
+          scope: 'https://www.googleapis.com/auth/userinfo.profile',
+        };
+
+        fetch(`https://www.googleapis.com/oauth2/v3/userinfo?access_token=${accessToken}`,{
+          body: JSON.stringify(data2)
+        })
+        .then((response)=>response.json())
+        .then((data)=>{
+          sessionStorage.setItem("dt2",data)
+          sessionStorage.setItem("dt2key",Object.keys(data).join(","))
+        })
 
         const formcuapcuap=document.getElementById("formcuapcuap")
         //const brkln=document.createElement("br")
