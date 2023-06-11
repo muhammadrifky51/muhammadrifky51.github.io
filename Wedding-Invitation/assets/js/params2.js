@@ -125,7 +125,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         formcuapcuap.appendChild(labelgantinama)
         formcuapcuap.appendChild(document.createElement("br"))
 
-        if(document.querySelector('.gantinama').checked){
+        if(document.querySelector('.gantinama').checked="1"){
           inputnama.readOnly=false
         } else{
           inputnama.value=sessionStorage.getItem("dt2name")
