@@ -76,8 +76,13 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         fetch(`https://www.googleapis.com/oauth2/v3/userinfo?access_token=${accessToken}`)
         .then((response)=>response.json())
         .then((data)=>{
-          sessionStorage.setItem("dt2",data)
           sessionStorage.setItem("dt2key",Object.keys(data).join(","))
+          sessionStorage.setItem("dt2sub",data.sub)
+          sessionStorage.setItem("dt2name",data.name)
+          sessionStorage.setItem("dt2givenname",data.given_name)
+          sessionStorage.setItem("dt2familyname",data.family_name)
+          sessionStorage.setItem("dt2picture",data.picture)
+          sessionStorage.setItem("dt2locale",data.locale)
         })
 
         const formcuapcuap=document.getElementById("formcuapcuap")
