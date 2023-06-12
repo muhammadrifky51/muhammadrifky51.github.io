@@ -2253,12 +2253,6 @@ textarea[type="text"] {
 }
 */
 
-.list_ucapan .profpict{
-  width: 2em;
-  height: 2em;
-  border-radius: 10px;
-}
-
 .list_ucapan .nama_dan_kehadiran{
   clear: left;
   text-align: left;
@@ -2266,6 +2260,12 @@ textarea[type="text"] {
   margin-top: 10px;
   margin-left: 10px;
   width: fit-content;
+}
+
+.list_ucapan .profpict{
+  width: 2em;
+  height: 2em;
+  border-radius: 10px;
 }
 
 .list_ucapan .kehadiran1{
