@@ -48,14 +48,16 @@ fetch('https://sheets.googleapis.com/v4/spreadsheets/1V-Xhd-KtT9cPimwQyfD4jyzT6v
       namanya.setAttribute("class","nama_dan_kehadiran wow fadeInDown")
       namanya.setAttribute("data-wow-duration","1.2s")
       namanya.setAttribute("data-wow-delay",delnum.toString()+"s")
-      namanya.innerText=data.values[i][2]
-
-      const fotoprofile=document.createElement("img")
+      
+      const fotoprofile= new Image()//document.createElement("img")
       fotoprofile.setAttribute("class","profpict wow fadeInDown")
       fotoprofile.setAttribute("data-wow-duration","1.2s")
       fotoprofile.setAttribute("data-wow-delay",delnum.toString()+"s")      
       fotoprofile.src=data.values[i][0]
       fotoprofile.alt=data.values[i][1]
+
+      namanya.appendChild(fotoprofile)
+      namanya.innerText=data.values[i][2]
 
       const statusnya=document.createElement("a")
       statusnya.innerText="a"
