@@ -2204,7 +2204,7 @@ textarea[type="text"] {
   clear: left;
   z-index: 2;
   background-color: #5dd1da;
-  width: fit-content;
+  width: -moz-fit-content;
   position: relative;
   padding: 4px;
   border-radius: 25px;
