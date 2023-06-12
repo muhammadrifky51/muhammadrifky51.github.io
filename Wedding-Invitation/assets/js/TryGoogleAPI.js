@@ -55,6 +55,7 @@ fetch('https://sheets.googleapis.com/v4/spreadsheets/1V-Xhd-KtT9cPimwQyfD4jyzT6v
       fotoprofile.setAttribute("data-wow-duration","1.2s")
       fotoprofile.setAttribute("data-wow-delay",delnum.toString()+"s")      
       fotoprofile.src=data.values[i][0]
+      fotoprofile.alt=data.values[i][1]
 
       const statusnya=document.createElement("a")
       statusnya.innerText="a"
