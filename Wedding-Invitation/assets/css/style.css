@@ -2211,6 +2211,7 @@ textarea[type="text"] {
   /*border-color: #000000;
   border-style: solid;
   border-width: 0.1px;*/
+  margin-top:5px;
   margin-left: 10px;
   margin-bottom: 15px;
   height: fit-content;
