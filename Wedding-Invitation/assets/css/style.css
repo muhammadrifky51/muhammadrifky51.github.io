@@ -2263,9 +2263,9 @@ textarea[type="text"] {
 }
 
 .list_ucapan .profpict{
-  width: 2em;
-  height: 2em;
-  border-radius: 10px;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 100px;
 }
 
 .list_ucapan .kehadiran1{
