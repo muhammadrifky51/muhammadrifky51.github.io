@@ -259,3 +259,20 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
       document.getElementById('nama').readOnly=true
     }
   }
+
+  function Submit_Ucapan(){
+    const NamaAkun=sessionStorage.getItem('dt2name');
+    const NamaDisplay=document.getElementById('nama').value;
+    const ProfPict=sessionStorage.getItem('dt2picture');
+    const HadirorNo=document.querySelector('input[name="kehadiran"]:checked').value;
+    const Pesannya=document.getElementById("ucapan").value;
+
+    console.log(NamaAkun)
+    console.log(NamaDisplay)
+    console.log(ProfPict)
+    console.log(HadirorNo)
+    console.log(Pesannya)
+
+    document.querySelector('input[name="kehadiran"]:checked').checked=false
+    document.getElementById("ucapan").value=""
+  }
