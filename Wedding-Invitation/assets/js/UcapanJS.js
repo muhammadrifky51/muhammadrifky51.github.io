@@ -37,7 +37,7 @@ const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values
 
 
 // Menangkap submit form
-document.querySelector('form').addEventListener('submit', function(e) {
+document.querySelector('xform').addEventListener('submit', function(e) {
     e.preventDefault(); // Mencegah halaman web untuk direfresh saat tombol submit diklik
   
     // Mendapatkan nilai dari input nama dan textarea ucapan
