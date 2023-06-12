@@ -60,13 +60,12 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
           sessionStorage.setItem("dt2familyname",data.family_name)
           sessionStorage.setItem("dt2picture",data.picture)
           sessionStorage.setItem("dt2locale",data.locale)
+          window.location = redirectUri
         })
 
         console.log(accessToken)
         console.log(expiresIn)
         console.log(refreshToken)
-
-        window.location = redirectUri
 
       })
       .catch((error) => {
