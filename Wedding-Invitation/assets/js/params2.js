@@ -122,8 +122,8 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         inputnama.id="nama"
         inputnama.rows="1"
         inputnama.placeholder="Namamu disini"
-        inputnama.value=sessionStorage.getItem("dt2name")        
         inputnama.readOnly=true
+        inputnama.value=sessionStorage.getItem("dt2name")        
         formcuapcuap.appendChild(inputnama)
         formcuapcuap.appendChild(document.createElement("br"))
         
