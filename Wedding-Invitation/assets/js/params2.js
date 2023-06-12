@@ -241,6 +241,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
 
   function Ganti_Nama_Fun(){
     if(document.getElementById('gantinama').checked){
+      document.getElementById('nama').value=''
       document.getElementById('nama').readOnly=false
     } else{
       document.getElementById('nama').value=sessionStorage.getItem("dt2name")        
