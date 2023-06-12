@@ -50,6 +50,12 @@ fetch('https://sheets.googleapis.com/v4/spreadsheets/1V-Xhd-KtT9cPimwQyfD4jyzT6v
       namanya.setAttribute("data-wow-delay",delnum.toString()+"s")
       namanya.innerText=data.values[i][2]
 
+      const fotoprofile=document.createElement("img")
+      fotoprofile.setAttribute("class","profpict wow fadeInDown")
+      fotoprofile.setAttribute("data-wow-duration","1.2s")
+      fotoprofile.setAttribute("data-wow-delay",delnum.toString()+"s")      
+      fotoprofile.src=data.values[i][0]
+
       const statusnya=document.createElement("a")
       statusnya.innerText="a"
       if (data.values[i][3]=="1"){
