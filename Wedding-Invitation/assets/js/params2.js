@@ -260,7 +260,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
     }
   }
 
-  function Submit_Ucapan(){
+  document.querySelector('form').addEventListener('submit', function(e){
     const NamaAkun=sessionStorage.getItem('dt2name');
     const NamaDisplay=document.getElementById('nama').value;
     const ProfPict=sessionStorage.getItem('dt2picture');
@@ -275,4 +275,4 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
 
     document.querySelector('input[name="kehadiran"]:checked').checked=false
     document.getElementById("ucapan").value=""
-  }
+  })
