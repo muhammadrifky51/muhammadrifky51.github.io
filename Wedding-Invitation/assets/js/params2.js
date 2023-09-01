@@ -224,7 +224,6 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         const submitbutton=document.createElement("input")
         submitbutton.type="submit"
         submitbutton.value="Kirim"
-        submitbutton.setAttribute("onclick","sendWish(textucapan)")
         
         formcuapcuap.appendChild(submitbutton)
 
