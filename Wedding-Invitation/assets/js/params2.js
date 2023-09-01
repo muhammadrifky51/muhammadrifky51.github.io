@@ -224,6 +224,8 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
         const submitbutton=document.createElement("input")
         submitbutton.type="submit"
         submitbutton.value="Kirim"
+        submitbutton.setAttribute("onclick","sendWish(textucapan)")
+        
         formcuapcuap.appendChild(submitbutton)
 
         //const textsignoutnya=document.getElementById("textsignout")
@@ -267,11 +269,40 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
     const HadirorNo=document.querySelector('input[name="kehadiran"]:checked').value;
     const Pesannya=document.getElementById("ucapan").value;
 
-    console.log(NamaAkun)
-    console.log(NamaDisplay)
-    console.log(ProfPict)
-    console.log(HadirorNo)
-    console.log(Pesannya)
+    // console.log(NamaAkun)
+    // console.log(NamaDisplay)
+    // console.log(ProfPict)
+    // console.log(HadirorNo)
+    // console.log(Pesannya)
+
+
+    // Define the URL for adding data to your spreadsheet
+    const addDataUrl = 'https://sheets.googleapis.com/v4/spreadsheets/1V-Xhd-KtT9cPimwQyfD4jyzT6vC2MZKAlzQufCub2RE/values/Tablenya?key=AIzaSyBWLiCwazxX-joobuNWWeJ_0_CKCGT77rk';
+
+    // Define the data you want to add as an object
+    const dataToAdd = {
+      values: [
+        [ProfPict, NamaAkun, NamaDisplay, HadirorNo, Pesannya]
+        // Add more rows as needed
+      ]
+    };
+
+    // Make a POST request to add data to your spreadsheet
+    fetch(addDataUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(dataToAdd),
+    })
+      .then(response => response.json())
+      .then(result => {
+        console.log('Data added successfully:', result);
+      })
+      .catch(error => {
+        console.error('Error adding data:', error);
+      });
+
 
     document.querySelector('input[name="kehadiran"]:checked').checked=false
     document.getElementById("ucapan").value=""
