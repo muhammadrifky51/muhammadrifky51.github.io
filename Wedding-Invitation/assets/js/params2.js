@@ -276,7 +276,7 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
 
 
     // Define the URL for adding data to your spreadsheet
-    const addDataUrl = 'https://sheets.googleapis.com/v4/spreadsheets/1V-Xhd-KtT9cPimwQyfD4jyzT6vC2MZKAlzQufCub2RE/values/Tablenya?key=AIzaSyBWLiCwazxX-joobuNWWeJ_0_CKCGT77rk';
+    const addDataUrl = 'https://crossorigin.me/https://sheets.googleapis.com/v4/spreadsheets/1V-Xhd-KtT9cPimwQyfD4jyzT6vC2MZKAlzQufCub2RE/values/Tablenya?key=AIzaSyBWLiCwazxX-joobuNWWeJ_0_CKCGT77rk';
 
     // Define the data you want to add as an object
     const dataToAdd = {
