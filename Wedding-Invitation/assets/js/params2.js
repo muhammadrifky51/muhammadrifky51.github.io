@@ -275,34 +275,28 @@ if ((code) && !(sessionStorage.getItem('accessToken'))) {
     // console.log(Pesannya)
 
 
-    // Define the URL for adding data to your spreadsheet
-    const addDataUrl = 'https://cors-proxy.htmldriven.com/?url=https://sheets.googleapis.com/v4/spreadsheets/1V-Xhd-KtT9cPimwQyfD4jyzT6vC2MZKAlzQufCub2RE/values/Tablenya?key=AIzaSyBWLiCwazxX-joobuNWWeJ_0_CKCGT77rk';
+    const webAppUrl = 'https://script.google.com/macros/s/AKfycbz38-0oILzTF4e9RqNhGc0YQFL2maWiw_uPiCaSeh74SH5NJMbwhG-P8lwYZkZi4BT_/exec'; // Replace with your web app URL
+const dataToAdd = {
+  values: [ProfPict, NamaAkun, NamaDisplay, HadirorNo, Pesannya]
+  // Add more rows as needed
+};
 
-    // Define the data you want to add as an object
-    const dataToAdd = {
-      values: [
-        [ProfPict, NamaAkun, NamaDisplay, HadirorNo, Pesannya]
-        // Add more rows as needed
-      ]
-    };
-
-    // Make a POST request to add data to your spreadsheet
-    fetch(addDataUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(dataToAdd),
-    })
-      .then(response => response.json())
-      .then(result => {
-        console.log('Data added successfully:', result);
-      })
-      .catch(error => {
-        console.error('Error adding data:', error);
-      });
-
+fetch(webAppUrl, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(dataToAdd),
+})
+  .then(response => response.text())
+  .then(result => {
+    console.log('Data added successfully:', result);
+  })
+  .catch(error => {
+    console.error('Error adding data:', error);
+  });
 
     document.querySelector('input[name="kehadiran"]:checked').checked=false
     document.getElementById("ucapan").value=""
+    window.location.reload()
   })
