@@ -298,5 +298,5 @@ fetch(webAppUrl, {
 
     document.querySelector('input[name="kehadiran"]:checked').checked=false
     document.getElementById("ucapan").value=""
-    window.location.reload()
+    //window.location.reload()
   })
