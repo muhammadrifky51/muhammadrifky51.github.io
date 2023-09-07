@@ -286,7 +286,9 @@ fetch(webAppUrl, {
   headers: {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': 'https://muhammadrifky51.github.io',
-    'Access-Control-Allow-Credentials' : 'true'
+    'Access-Control-Allow-Credentials' : 'true',
+    'Access-Control-Allow-Methods' : 'POST',
+    'Access-Control-Allow-Headers' : 'Origin, Content-Type, Accept'
   },
   body: JSON.stringify(dataToAdd),
 })
