@@ -283,7 +283,7 @@ const dataToAdd = {
 
 fetch(webAppUrl, {
   mode:'no-cors',
-  credentials = 'include',
+  credentials : 'include',
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
